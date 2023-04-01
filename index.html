@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculator</title>
+    <title>log into County homepage</title>
     <style>
-        *{
+*{
             
             box-sizing: 0%;
         }
@@ -29,70 +29,45 @@ body{
     background-color: rgb(250, 175, 77);
     
 }
-input[type="text"]{
-
-
-}
 #foc{
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-font-size: large;
-border: none;
-border-radius: 5px;
-}
-#foc:focus{
-    outline: none;
-    border: none;
-    width: 70%;
-    border-bottom: 5px solid yellow;
-}
-
-#sub{
     border: none;
     border-radius: 5px;
-    height: 30px;
-    padding: 2px;
+    font-size: larger;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#foc:focus{
+    width: 70%;
+    border: none;
+    outline: none;
+    border-bottom: 5px solid pink;
+    
 }
 
 
     </style>
+    <script type="text/javascript" language="Javascript" >
+function login(){
+if(document.log.user.value=="apcs" && document.log.pass.value=="bse2023")
+{
+    alert("login is successful!!");
+    window.location="index.html";
+}
+else{
+    alert('Wrong user name or password');
+}
 
-<script type="text/javascript" language="Javascript">
+}
 
-    function arithmetic(){
-if(document.calc.prep[0].checked)
-document.calc.output.value=parseInt(document.calc.value1.value) + parseInt(document.calc.value2.value);
-
-else if(document.calc.prep[1].checked)
-document.calc.output.value=parseInt(document.calc.value1.value) - parseInt(document.calc.value2.value);
-
-else if(document.calc.prep[2].checked)
-document.calc.output.value=parseInt(document.calc.value1.value) * parseInt(document.calc.value2.value);
-
-else (document.calc.prep[3].checked)
-document.calc.output.value=parseInt(document.calc.value1.value) / parseInt(document.calc.value2.value);
-
-    }
-</script>
-
-
+    </script>
 </head>
 <body>
-    
     <div class="form">
-        <h1>Calculator</h1><br><br>
-        <form action="" name="calc">
-            <table>
-<tr><p><td> First Value: <input type="text" name="value1" placeholder="Enter your first value" required autofocus id="foc" onfocus="placeholder=''"/></td></p></tr> 
-<tr><p><td>Second Value: <input type="text" name="value2" placeholder="Enter your second value" required id="foc" /></td></p></tr>
-<tr><p><td>  Output:<input type="text" name="output" id="foc" value=""/></td></p></tr>
-
-</table>
-<input type="button" placeholder="Execute" value="Execute" id="sub"  onclick="arithmetic()"><br><br>
-<input type="radio" value="add" name="prep" >Addition<br> 
-<input type="radio" name="prep" value="sub">Substraction<br>
-<input type="radio" name="prep" value="mul">Multiply<br>
-<input type="radio" name="prep" value="div">Division<br><br><br>
-        </form>
+<h1><strong>Log into County homepage</strong></h1><br><br>
+<form action="" name="log">
+    User Name: <input type="text" name="user" required autofocus placeholder="user name" id="foc"><br><br>
+    Password: <input type="password"  name="pass" required placeholder="......."  id="foc"><br><br>
+    <input type="button" value="login" onclick="login()" style="border: none; border-radius: 5px; height: 40px; padding: 2px; width: 40px;"><br><br>
+</form>
 
     </div>
     
